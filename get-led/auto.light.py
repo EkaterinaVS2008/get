@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BCM)
 led = 26  
-photo = 6 
+photo = 23
  
 GPIO.setup(led, GPIO.OUT) 
 GPIO.setup(photo, GPIO.IN)

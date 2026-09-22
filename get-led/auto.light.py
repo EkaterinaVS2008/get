@@ -1,11 +1,11 @@
 import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BCM)
-led = 5  
+led = 26  
 photo = 6 
  
-GPIO.setup(LED_PIN, GPIO.OUT) 
-GPIO.setup(PHOTO_PIN, GPIO.IN)
+GPIO.setup(led, GPIO.OUT) 
+GPIO.setup(photo, GPIO.IN)
 period = 1.0
  
 try:

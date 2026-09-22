@@ -4,18 +4,11 @@ GPIO.setmode(GPIO.BCM)
 led = 26
 GPIO.setup(led, GPIO.OUT)
 pwm = GPIO.PWM(led, 200)
-k = 0.0
-pwm.start(k)
- 
-try:
-    while True:
-        pwm.ChangeDutyCycle(k)
+duty = 0.0
+pwm.start(duty)
+while True:
+        pwm.ChangeDutyCycle(duty)
         time.sleep(0.05)
-        k += 1.0
-        if k > 100.0:
-            k = 0.0
-except KeyboardInterrupt:
-    pass
-finally:
-    pwm.stop()
-    GPIO.cleanup()
+        duty += 1.0
+        if duty > 100.0:
+            duty = 0.0
